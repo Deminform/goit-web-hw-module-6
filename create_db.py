@@ -5,7 +5,7 @@ def create_db():
     with open('database/school.sql', 'r') as file:
         sql = file.read()
 
-    with sqlite3.connect('database/salary.db') as con:
+    with sqlite3.connect('database/school.db') as con:
         cur = con.cursor()
         cur.executescript(sql)
 
