@@ -39,10 +39,10 @@ CREATE TABLE subjects (
 DROP TABLE IF EXISTS scores;
 CREATE TABLE scores (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    score INTEGER,
-    date DATE NOT NULL,
+    score REAL,
     student_id INTEGER,
     subject_id INTEGER,
+    date DATE NOT NULL,
     FOREIGN KEY (student_id) REFERENCES students (id)
                       ON DELETE CASCADE
                       ON UPDATE CASCADE,
