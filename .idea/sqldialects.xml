@@ -9,6 +9,8 @@
     <file url="file://$PROJECT_DIR$/query_4.sql" dialect="SQLite" />
     <file url="file://$PROJECT_DIR$/query_5.sql" dialect="SQLite" />
     <file url="file://$PROJECT_DIR$/query_6.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/query_7.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/query_8.sql" dialect="SQLite" />
     <file url="PROJECT" dialect="SQLite" />
   </component>
 </project>
