@@ -2,7 +2,7 @@ import sqlite3
 
 
 def create_db():
-    with open('database/school.sql', 'r') as file:
+    with open('sql_files/db_initializer.sql', 'r') as file:
         sql = file.read()
 
     with sqlite3.connect('database/school.db') as con:

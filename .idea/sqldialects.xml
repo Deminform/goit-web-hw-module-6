@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/database/school.sql" dialect="SQLite" />
-    <file url="file://$PROJECT_DIR$/lesson_examples/02_joined_tables/fill_data.py" dialect="SQLite" />
-    <file url="file://$PROJECT_DIR$/query_1.sql" dialect="SQLite" />
-    <file url="file://$PROJECT_DIR$/query_10.sql" dialect="SQLite" />
-    <file url="file://$PROJECT_DIR$/query_11.sql" dialect="SQLite" />
-    <file url="file://$PROJECT_DIR$/query_12.sql" dialect="SQLite" />
-    <file url="file://$PROJECT_DIR$/query_2.sql" dialect="SQLite" />
-    <file url="file://$PROJECT_DIR$/query_3.sql" dialect="SQLite" />
-    <file url="file://$PROJECT_DIR$/query_4.sql" dialect="SQLite" />
-    <file url="file://$PROJECT_DIR$/query_5.sql" dialect="SQLite" />
-    <file url="file://$PROJECT_DIR$/query_6.sql" dialect="SQLite" />
-    <file url="file://$PROJECT_DIR$/query_7.sql" dialect="SQLite" />
-    <file url="file://$PROJECT_DIR$/query_8.sql" dialect="SQLite" />
-    <file url="file://$PROJECT_DIR$/query_9.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/sql_files/db_initializer.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/sql_files/query_1.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/sql_files/query_10.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/sql_files/query_11.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/sql_files/query_12.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/sql_files/query_2.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/sql_files/query_3.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/sql_files/query_4.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/sql_files/query_5.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/sql_files/query_6.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/sql_files/query_7.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/sql_files/query_8.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/sql_files/query_9.sql" dialect="SQLite" />
     <file url="PROJECT" dialect="SQLite" />
   </component>
 </project>
