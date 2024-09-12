@@ -3,6 +3,9 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/database/school.sql" dialect="SQLite" />
     <file url="file://$PROJECT_DIR$/lesson_examples/02_joined_tables/fill_data.py" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/query_1.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/query_2.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/query_3.sql" dialect="SQLite" />
     <file url="PROJECT" dialect="SQLite" />
   </component>
 </project>
