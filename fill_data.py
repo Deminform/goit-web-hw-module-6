@@ -6,7 +6,7 @@ import faker
 
 NUMBER_STUDENTS = 50
 NUMBER_GROUPS = 3
-NUMBER_TEACHERS = 5
+NUMBER_TEACHERS = 8
 SUBJECTS = ['Mathematics', 'Physics', 'History', 'Geography', 'Computer Science']
 NUMBER_SCORES = 20 * NUMBER_STUDENTS
 
@@ -20,13 +20,13 @@ def generate_fake_data(number_students, number_groups, number_teachers, subjects
     fake_data = faker.Faker()
 
     for _ in range(number_students):
-        fake_students.append(fake_data.full_name())
+        fake_students.append(fake_data.name())
 
     for _ in range(number_groups):
-        fake_groups.append(fake_data.random_uppercase_letter() + str(fake_data.random_number(2, True)))
+        fake_groups.append('G' + str(randint(300, 399)))
 
     for _ in range(number_teachers):
-        fake_teachers.append(fake_data.full_name())
+        fake_teachers.append(fake_data.name())
 
     for subject in subjects:
         fake_subjects.append(subject)
@@ -39,40 +39,36 @@ def generate_fake_data(number_students, number_groups, number_teachers, subjects
 
 def prepare_data(students, groups, teachers, subjects, scores):
     for_students = []
-    for student in students:
-        for_students.append((student,))
+    for i, student in enumerate(students):
+        group = groups[i % len(groups) + 1]
+        for_students.append((student, group,))
 
     for_groups = []
-    index = 1
-    students_per_group = NUMBER_STUDENTS / NUMBER_GROUPS
     for group in groups:
-        for student_id in range(index, len(students) + 1):
-            if len(for_groups) > students_per_group:
-                index = student_id
-                break
-            for_groups.append((group, student_id,))
+        for_groups.append((group,))
 
     for_teachers = []
     for teacher in teachers:
         for_teachers.append((teacher,))
 
     for_subjects = []
-    for subject in subjects:
-        for teacher_id in range(1, NUMBER_TEACHERS + 1):
-            for_subjects.append((subject, teacher_id,))
+    for i, subject in enumerate(subjects):
+        teacher = teachers[i % len(teachers) + 1]
+        for_subjects.append((subject, teacher,))
 
     for_score = []
-    start_date = datetime(2023, 1, 1)
-    for student_id in range(1, NUMBER_STUDENTS + 1):
-        score_date = start_date + timedelta(days=randint(0, 364))
-        for score in scores:
-            for_score.append((score, score_date, student_id, randint(1, len(subjects)),))
+    # start_date = datetime(2023, 1, 1)
+    for i, score in enumerate(scores):
+        student = students[i % len(students) + 1]
+        subject = subjects[i % len(subjects) + 1]
+        # for_score.append((score, student, subject, start_date + timedelta(days=randint(0, 364))))
+        for_score.append((score, student, subject, faker.Faker().date_between('2023-01-01', '2023-12-31'),))
 
     return for_students, for_groups, for_teachers, for_subjects, for_score
 
 
 def insert_data_to_db(students, groups, teachers, subjects, scores):
-    with sqlite3.connect('database/salary.db') as con:
+    with sqlite3.connect('database/school.db') as con:
         cur = con.cursor()
 
         sql_to_students = 'INSERT INTO students(student_name) VALUES (?)'
